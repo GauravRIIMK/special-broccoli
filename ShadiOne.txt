@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShaadiOne - Legacy Wedding Experiences</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* CSS from previous answer with these additions */
+        .service-tier {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-tier::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+        }
+        .service-tier * {
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6M_3BMVcLpQ?autoplay=1&mute=1&loop=1&playlist=6M_3BMVcLpQ&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="hero-content">
+            <h1>Legacy Wedding Experiences</h1>
+            <p class="subheadline">Where Your Love Story Becomes a Timeless Legacy</p>
+            <div class="cta-buttons">
+                <a href="#concierge" class="cta-button">Begin Your Journey</a>
+                <a href="#arvr" class="cta-button">Experience AR/VR Planning</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>The Luminary Collection</h2>
+        <div class="service-tiers">
+            <!-- Diamond Tier -->
+            <div class="service-tier diamond" style="background-image: url('https://images.unsplash.com/photo-1608048608022-e3862cc51c08?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+                <h3>Diamond Tier</h3>
+                <div class="features">
+                    <ul>
+                        <li><i class="fas fa-gem"></i> Unlimited planning hours</li>
+                        <li><i class="fas fa-surprise"></i> Signature surprise moments</li>
+                        <li><i class="fas fa-vr-cardboard"></i> Complete AR/VR experience</li>
+                        <li><i class="fas fa-concierge-bell"></i> 24/7 dedicated concierge</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Platinum Tier -->
+            <div class="service-tier platinum" style="background-image: url('https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+                <h3>Platinum Tier</h3>
+                <p>Premium personalization with AR/VR venue visualization and priority concierge access</p>
+            </div>
+            <!-- Gold Tier -->
+            <div class="service-tier gold" style="background-image: url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+                <h3>Gold Tier</h3>
+                <p>Professional guidance with basic AR/VR tools and select surprise elements</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Showcase -->
+    <section class="technology-showcase" id="technology">
+        <h2>Wedding Visionary Suite</h2>
+        <div class="arvr-demo">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6XrLq1XQkqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Legacy Wedding Stories -->
+    <section class="wedding-stories" id="stories">
+        <h2>Our Legacy Creations</h2>
+        <div class="story-gallery">
+            <div class="story-item" style="background-image: url('https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+                <div class="story-overlay">
+                    <h4>Palatial Romance at Leela Palace</h4>
+                </div>
+            </div>
+            <!-- Add 5 more story items with similar structure -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Connaught Place, Delhi 110001</p>
+                <p><i class="fas fa-phone"></i> +91 11 4100 0000</p>
+                <p><i class="fab fa-whatsapp"></i> +91 98765 43210</p>
+            </div>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scroll functionality
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Update current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
